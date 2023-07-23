@@ -1,0 +1,37 @@
+*** Variables ***
+${url} =    https://www.myntra.com/
+${bdriver} =    Chrome
+${ChromeOptions} =    --disable-notifications
+${listofmenubar} =    xpath =    //*[@class='desktop-navLink']/a
+${firstElementClick} =    xpath =    (//*[@class='desktop-navLink']/a)[1]
+${SectionsList} =    xpath =    //*[@class='text-banner-title']
+${courselclick} =    xpath =    (//*[@class='slick-dots']/li/button)[5]
+${productSearch} =    xpath =    //*[@class='desktop-searchBar']
+${mensectionfilter} =    xpath =    (//label[normalize-space()='Men'])[1]
+${clickonfirstprod} =    xpath =    //*[text()='Marvel Comic Printed T-shirt']
+${prodName} =    xpath =    (//*[@class='product-product'])[1]
+${productNamePP} =    xpath =    (//*[contains(text(),'Men Black Marvel Comic Printed Pure Cotton T-shirt')])[1]
+${ppdname} =    xpath =    //*[@class='pdp-name']
+${productPrice} =    xpath =    //*[@class='pdp-price']/strong
+${addtocartPrice} =    xpath =    //span[contains(text(),'1,059')]
+${product_details_1} =    xpath =    (//*[@class='pdp-product-description-content']/ul/li)[1]
+${product_details_2} =    xpath =    (//*[@class='pdp-product-description-content']/ul/li)[2]
+${product_details_3} =    xpath =    (//*[@class='pdp-product-description-content']/ul/li)[3]
+${product_details_4} =    xpath =    (//*[@class='pdp-product-description-content']/ul/li)[4]
+${product_details_5} =    xpath =    (//*[@class='pdp-product-description-content']/ul/li)[5]
+${product_details_6} =    xpath =    (//*[@class='pdp-product-description-content']/ul/li)[6]
+${wishlist} =    xpath =    //*[text()='WISHLIST']
+${loginMobNu} =    xpath =    //*[@autocomplete='new-password']
+${continueBttn} =    xpath =    //*[@class='submitBottomOption']
+${addtowishlist} =    xpath =    (//*[@class='desktop-userTitle'])[2]
+${removeFrwishlist} =    xpath =    (//*[@class='itemcard-removeIcon'])[1]
+${emptywishlistMesg} =    xpath =    //*[@class='wishlistEmpty-heading']
+${selectsize} =    xpath =    //*[normalize-space()='L']
+${addtobag} =    xpath =    //*[normalize-space()='ADD TO BAG']
+${bag} =    xpath =    (//span[normalize-space()='Bag'])[1]
+${clickpopup} =    xpath =    //*[@class='itemComponents-base-invisibleBackDrop']
+${remove} =    xpath =    (//*[@class='inlinebuttonV2-base-action bulkActionStrip-desktopActionButton'])[1]
+${remove1} =    xpath =    (//*[@class='inlinebuttonV2-base-actionButton '])[1]
+${emptyText} =    xpath =     //*[@class='emptyCart-base-emptyDesc']
+${logo} =    xpath =    //*[@class='logo-inline']
+${addtocartproprice} =    xpath =    (//span[contains(text(),'1,059')])[1]

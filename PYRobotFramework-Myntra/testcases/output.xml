@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230723 15:06:32.023" rpa="false" schemaversion="4">
+<suite id="s1" name="Testcases" source="C:\Users\knwrp\OneDrive\Desktop\PYRobotFramework-lifestyle\testcases\testcases.robot">
+<test id="s1-t1" name="testcases" line="7">
+<kw name="open myntra" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${bdriver}</arg>
+<arg>options=add_argument("--disable-notifications")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230723 15:06:32.331" level="INFO">Opening browser 'Chrome' to base url 'https://www.myntra.com/'.</msg>
+<msg timestamp="20230723 15:06:32.347" level="INFO">Executing: C:\Users\knwrp\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230723 15:06:32.331" endtime="20230723 15:06:38.393"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230723 15:06:38.394" endtime="20230723 15:06:38.725"/>
+</kw>
+<status status="PASS" starttime="20230723 15:06:32.331" endtime="20230723 15:06:38.725"/>
+</kw>
+<kw name="myntra HomePage" library="keywords">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${listofmenubar}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230723 15:06:38.804" level="INFO">${count} = 6</msg>
+<status status="PASS" starttime="20230723 15:06:38.727" endtime="20230723 15:06:38.804"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elementcount:${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230723 15:06:38.804" endtime="20230723 15:06:38.807"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:06:48.808" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230723 15:06:38.808" endtime="20230723 15:06:48.808"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${firstElementClick}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:06:48.808" level="INFO">Clicking element 'xpath = (//*[@class='desktop-navLink']/a)[1]'.</msg>
+<status status="PASS" starttime="20230723 15:06:48.808" endtime="20230723 15:06:51.315"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:06:54.317" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230723 15:06:51.315" endtime="20230723 15:06:54.317"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230723 15:06:54.324" level="INFO">${current_url} = https://www.myntra.com/shop/men</msg>
+<status status="PASS" starttime="20230723 15:06:54.317" endtime="20230723 15:06:54.324"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${current_url}</arg>
+<arg>https://www.myntra.com/shop/men</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230723 15:06:54.324" endtime="20230723 15:06:54.324"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${getlist}</var>
+<arg>${SectionsList}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230723 15:06:54.351" level="INFO">${getlist} = []</msg>
+<status status="PASS" starttime="20230723 15:06:54.324" endtime="20230723 15:06:54.351"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{getlist}</value>
+<iter>
+<var name="${element}"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230723 15:06:54.352" endtime="20230723 15:06:54.352"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>total sections printed are :: ${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230723 15:06:54.352" endtime="20230723 15:06:54.352"/>
+</kw>
+<status status="NOT RUN" starttime="20230723 15:06:54.352" endtime="20230723 15:06:54.352"/>
+</iter>
+<status status="NOT RUN" starttime="20230723 15:06:54.351" endtime="20230723 15:06:54.352"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:06:59.353" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:06:54.352" endtime="20230723 15:06:59.353"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:04.354" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:06:59.353" endtime="20230723 15:07:04.354"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${productSearch}</arg>
+<arg>Marvel</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230723 15:07:04.354" level="INFO">Typing text 'Marvel' into text field 'xpath = //*[@class='desktop-searchBar']'.</msg>
+<status status="PASS" starttime="20230723 15:07:04.354" endtime="20230723 15:07:04.557"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3S</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:07.557" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:04.557" endtime="20230723 15:07:07.557"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${productSearch}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230723 15:07:07.557" level="INFO">Sending key(s) ('ENTER',) to xpath = //*[@class='desktop-searchBar'] element.</msg>
+<msg timestamp="20230723 15:07:07.896" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20230723 15:07:07.896" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230723 15:07:07.557" endtime="20230723 15:07:10.341"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:13.343" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:10.341" endtime="20230723 15:07:13.343"/>
+</kw>
+<status status="PASS" starttime="20230723 15:06:38.726" endtime="20230723 15:07:13.343"/>
+</kw>
+<kw name="myntra productpage" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${mensectionfilter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:07:13.346" level="INFO">Clicking element 'xpath = (//label[normalize-space()='Men'])[1]'.</msg>
+<status status="PASS" starttime="20230723 15:07:13.343" endtime="20230723 15:07:13.532"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:17.533" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:13.533" endtime="20230723 15:07:17.533"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${ActProdName}</var>
+<arg>${clickonfirstprod}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:07:17.589" level="INFO">${ActProdName} = Marvel Comic Printed T-shirt</msg>
+<status status="PASS" starttime="20230723 15:07:17.533" endtime="20230723 15:07:17.589"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ActProdName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230723 15:07:17.589" endtime="20230723 15:07:17.591"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${prodName}</arg>
+<arg>Marvel Comic Printed T-shirt</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230723 15:07:17.628" level="INFO">Element 'xpath = (//*[@class='product-product'])[1]' contains text 'Marvel Comic Printed T-shirt'.</msg>
+<status status="PASS" starttime="20230723 15:07:17.592" endtime="20230723 15:07:17.628"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:22.628" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:17.628" endtime="20230723 15:07:22.628"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${clickonfirstprod}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:07:22.628" level="INFO">Clicking element 'xpath = //*[text()='Marvel Comic Printed T-shirt']'.</msg>
+<status status="PASS" starttime="20230723 15:07:22.628" endtime="20230723 15:07:22.850"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:27.850" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:22.850" endtime="20230723 15:07:27.850"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230723 15:07:27.901" level="INFO">${handles} = ['E79F27732F918AD82C930DF75F4105B7', '55DB8773468DC385292BBECACFF50D2B']</msg>
+<status status="PASS" starttime="20230723 15:07:27.850" endtime="20230723 15:07:27.901"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${handles}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230723 15:07:27.901" endtime="20230723 15:07:27.902"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230723 15:07:27.902" endtime="20230723 15:07:28.320"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230723 15:07:28.483" level="INFO">${title} = Buy The Souled Store Men Black Marvel Comic Printed Pure Cotton T Shirt - Tshirts for Men 23686840 | Myntra</msg>
+<status status="PASS" starttime="20230723 15:07:28.321" endtime="20230723 15:07:28.483"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230723 15:07:28.483" endtime="20230723 15:07:28.484"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:33.486" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:28.485" endtime="20230723 15:07:33.486"/>
+</kw>
+<status status="PASS" starttime="20230723 15:07:13.343" endtime="20230723 15:07:33.486"/>
+</kw>
+<kw name="myntra productdetailspage" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:43.486" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:33.486" endtime="20230723 15:07:43.486"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${product_details_1}</arg>
+<arg>Black Tshirt for men</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230723 15:07:43.486" level="INFO">Verifying element 'xpath = (//*[@class='pdp-product-description-content']/ul/li)[1]' contains exact text 'Black Tshirt for men'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.486" endtime="20230723 15:07:43.537"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${product_details_2}</arg>
+<arg>Marvel comic printed</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230723 15:07:43.538" level="INFO">Verifying element 'xpath = (//*[@class='pdp-product-description-content']/ul/li)[2]' contains exact text 'Marvel comic printed'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.537" endtime="20230723 15:07:43.576"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${product_details_3}</arg>
+<arg>Regular length</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230723 15:07:43.576" level="INFO">Verifying element 'xpath = (//*[@class='pdp-product-description-content']/ul/li)[3]' contains exact text 'Regular length'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.576" endtime="20230723 15:07:43.609"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${product_details_4}</arg>
+<arg>Round neck</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230723 15:07:43.609" level="INFO">Verifying element 'xpath = (//*[@class='pdp-product-description-content']/ul/li)[4]' contains exact text 'Round neck'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.609" endtime="20230723 15:07:43.642"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${product_details_5}</arg>
+<arg>Short, Drop-Shoulder Sleeves</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230723 15:07:43.693" level="INFO">Element 'xpath = (//*[@class='pdp-product-description-content']/ul/li)[5]' contains text 'Short, Drop-Shoulder Sleeves'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.642" endtime="20230723 15:07:43.693"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${product_details_6}</arg>
+<arg>Knitted cotton fabric</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230723 15:07:43.693" level="INFO">Verifying element 'xpath = (//*[@class='pdp-product-description-content']/ul/li)[6]' contains exact text 'Knitted cotton fabric'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.693" endtime="20230723 15:07:43.726"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${ppdname}</arg>
+<arg>Men Black Marvel Comic Printed Pure Cotton T-shirt</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230723 15:07:43.769" level="INFO">Element 'xpath = //*[@class='pdp-name']' contains text 'Men Black Marvel Comic Printed Pure Cotton T-shirt'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.726" endtime="20230723 15:07:43.769"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${productPrice}</arg>
+<arg>1049</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230723 15:07:43.809" level="INFO">Element 'xpath = //*[@class='pdp-price']/strong' contains text '1049'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.769" endtime="20230723 15:07:43.809"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selectsize}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:07:43.809" level="INFO">Clicking element 'xpath = //*[normalize-space()='L']'.</msg>
+<status status="PASS" starttime="20230723 15:07:43.809" endtime="20230723 15:07:43.974"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:51.975" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:43.975" endtime="20230723 15:07:51.975"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addtobag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:07:51.977" level="INFO">Clicking element 'xpath = //*[normalize-space()='ADD TO BAG']'.</msg>
+<status status="PASS" starttime="20230723 15:07:51.975" endtime="20230723 15:07:52.184"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:07:57.186" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:07:52.184" endtime="20230723 15:07:57.186"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${bag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:07:57.186" level="INFO">Clicking element 'xpath = (//span[normalize-space()='Bag'])[1]'.</msg>
+<status status="PASS" starttime="20230723 15:07:57.186" endtime="20230723 15:08:00.487"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:08:05.488" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:08:00.487" endtime="20230723 15:08:05.488"/>
+</kw>
+<status status="PASS" starttime="20230723 15:07:33.486" endtime="20230723 15:08:05.488"/>
+</kw>
+<kw name="myntra addtocartpage" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:08:10.489" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:08:05.488" endtime="20230723 15:08:10.489"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${clickpopup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:08:10.489" level="INFO">Clicking element 'xpath = //*[@class='itemComponents-base-invisibleBackDrop']'.</msg>
+<status status="PASS" starttime="20230723 15:08:10.489" endtime="20230723 15:08:10.576"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:08:17.577" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20230723 15:08:10.576" endtime="20230723 15:08:17.577"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${addtocartPrice}</arg>
+<arg>1,059</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230723 15:08:17.597" level="INFO">Element 'xpath = //span[contains(text(),'1,059')]' contains text '1,059'.</msg>
+<status status="PASS" starttime="20230723 15:08:17.577" endtime="20230723 15:08:17.597"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:08:20.598" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230723 15:08:17.597" endtime="20230723 15:08:20.598"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${remove}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:08:20.598" level="INFO">Clicking element 'xpath = (//*[@class='inlinebuttonV2-base-action bulkActionStrip-desktopActionButton'])[1]'.</msg>
+<status status="PASS" starttime="20230723 15:08:20.598" endtime="20230723 15:08:20.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:08:25.736" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:08:20.735" endtime="20230723 15:08:25.736"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${remove1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:08:25.736" level="INFO">Clicking element 'xpath = (//*[@class='inlinebuttonV2-base-actionButton '])[1]'.</msg>
+<status status="PASS" starttime="20230723 15:08:25.736" endtime="20230723 15:08:25.898"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:08:28.899" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230723 15:08:25.898" endtime="20230723 15:08:28.899"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${emptyText}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230723 15:08:28.930" level="INFO">Element 'xpath = //*[@class='emptyCart-base-emptyDesc']' is displayed.</msg>
+<status status="PASS" starttime="20230723 15:08:28.899" endtime="20230723 15:08:28.930"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230723 15:08:33.930" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230723 15:08:28.930" endtime="20230723 15:08:33.930"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230723 15:08:33.930" level="INFO">Clicking element 'xpath = //*[@class='logo-inline']'.</msg>
+<status status="PASS" starttime="20230723 15:08:33.930" endtime="20230723 15:08:34.829"/>
+</kw>
+<status status="PASS" starttime="20230723 15:08:05.488" endtime="20230723 15:08:34.830"/>
+</kw>
+<status status="PASS" starttime="20230723 15:06:32.316" endtime="20230723 15:08:34.831"/>
+</test>
+<status status="PASS" starttime="20230723 15:06:32.023" endtime="20230723 15:08:34.834"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
